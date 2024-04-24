@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.xdclass.mapper.RoleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.xdclass.model.RoleDO">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="code" property="code" />
+        <result column="description" property="description" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, code, description, gmt_create, gmt_modified
+    </sql>
+
+
+    <!-- 获取角色编码列表 通过账户ID -->
+    <select id="findRoleCodeList" resultType="string">
+        SELECT r.code
+        FROM account_role AS ar
+                 LEFT JOIN  role AS r
+                            ON r.id = ar.role_id
+        WHERE ar.account_id = ${accountId}
+    </select>
+
+</mapper>

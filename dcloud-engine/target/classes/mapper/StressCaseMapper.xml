@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.xdclass.mapper.StressCaseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.xdclass.model.StressCaseDO">
+        <id column="id" property="id" />
+        <result column="project_id" property="projectId" />
+        <result column="module_id" property="moduleId" />
+        <result column="environment_id" property="environmentId" />
+        <result column="name" property="name" />
+        <result column="description" property="description" />
+        <result column="assertion" property="assertion" />
+        <result column="relation" property="relation" />
+        <result column="stress_source_type" property="stressSourceType" />
+        <result column="thread_group_config" property="threadGroupConfig" />
+        <result column="jmx_url" property="jmxUrl" />
+        <result column="path" property="path" />
+        <result column="method" property="method" />
+        <result column="query" property="query" />
+        <result column="header" property="header" />
+        <result column="body" property="body" />
+        <result column="body_type" property="bodyType" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, project_id, module_id, environment_id, name, description, assertion, relation, stress_source_type, thread_group_config, jmx_url, path, method, query, header, body, body_type, gmt_create, gmt_modified
+    </sql>
+
+</mapper>

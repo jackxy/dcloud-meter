@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.xdclass.mapper.ReportDetailStressMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.xdclass.model.ReportDetailStressDO">
+        <id column="id" property="id" />
+        <result column="report_id" property="reportId" />
+        <result column="assert_info" property="assertInfo" />
+        <result column="error_count" property="errorCount" />
+        <result column="error_percentage" property="errorPercentage" />
+        <result column="max_time" property="maxTime" />
+        <result column="mean_time" property="meanTime" />
+        <result column="min_time" property="minTime" />
+        <result column="receive_k_b_per_second" property="receiveKBPerSecond" />
+        <result column="sent_k_b_per_second" property="sentKBPerSecond" />
+        <result column="request_location" property="requestLocation" />
+        <result column="request_header" property="requestHeader" />
+        <result column="request_body" property="requestBody" />
+        <result column="request_rate" property="requestRate" />
+        <result column="response_code" property="responseCode" />
+        <result column="response_data" property="responseData" />
+        <result column="response_header" property="responseHeader" />
+        <result column="sampler_count" property="samplerCount" />
+        <result column="sampler_label" property="samplerLabel" />
+        <result column="sample_time" property="sampleTime" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, report_id, assert_info, error_count, error_percentage, max_time, mean_time, min_time, receive_k_b_per_second, sent_k_b_per_second, request_location, request_header, request_body, request_rate, response_code, response_data, response_header, sampler_count, sampler_label, sample_time, gmt_create, gmt_modified
+    </sql>
+
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.xdclass.mapper.ReportMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="net.xdclass.model.ReportDO">
+        <id column="id" property="id" />
+        <result column="project_id" property="projectId" />
+        <result column="case_id" property="caseId" />
+        <result column="type" property="type" />
+        <result column="name" property="name" />
+        <result column="execute_state" property="executeState" />
+        <result column="summary" property="summary" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="expand_time" property="expandTime" />
+        <result column="quantity" property="quantity" />
+        <result column="pass_quantity" property="passQuantity" />
+        <result column="fail_quantity" property="failQuantity" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, project_id, case_id, type, name, execute_state, summary, start_time, end_time, expand_time, quantity, pass_quantity, fail_quantity, gmt_create, gmt_modified
+    </sql>
+
+</mapper>
